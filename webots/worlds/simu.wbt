@@ -1,0 +1,167 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "../protos/CircleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/MattePaint.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/toys/protos/RubberDuck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/husarion/rosbot/protos/Rosbot.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/animals/protos/Sheep.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/devices/slamtec/protos/RpLidarA2.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/samples/rendering/protos/Helmet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/drinks/protos/BeerBottle.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/balls/protos/SoccerBall.proto"
+
+WorldInfo {
+  contactProperties [
+    ContactProperties {
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.15839731805497972 0.11423585542375078 -0.9807448490655424 1.84508300681112
+  position 0.32397770257293984 1.782171552428367 3.5017686504401144
+}
+TexturedBackground {
+  texture "noon_stormy_empty"
+}
+TexturedBackgroundLight {
+  luminosity 1.5
+}
+RubberDuck {
+  translation 3.718752944902179 3.733945676130625 2.1783092722607003
+  rotation 0.023985842448364776 0.006548434496309232 0.999690850897261 0.7167349563982097
+  name "duck1"
+  scale 7
+}
+RubberDuck {
+  translation -3.737309944333252 -3.69481045588771 2.178271634593447
+  rotation 0.005119707267281806 -0.008326093049755588 0.9999522312450851 -2.2165715879074925
+  name "duck3"
+  scale 7
+  bodyColor 0.878431 0.105882 0.141176
+}
+RubberDuck {
+  translation -3.7260996681684766 3.744012362872326 2.1804586356419726
+  rotation 0.00650863740087968 -0.0019557432687957073 0.9999769060870609 2.4027461316909973
+  name "duck4"
+  scale 7
+  bodyColor 0.878431 0.105882 0.141176
+}
+RubberDuck {
+  translation 3.73002290580457 -3.696187382560586 2.178270292828692
+  rotation 0.020264982632458507 -0.010752356618274643 -0.9997368240222322 0.7832287262183982
+  name "duck2"
+  scale 7
+  bodyColor 0.180392 0.760784 0.494118
+}
+RubberDuck {
+  hidden linearVelocity_0 -0.002342805499615113 -0.003425875525274558 0.00037943993684424625
+  hidden angularVelocity_0 0.024470793937407125 -0.016734531073845323 -8.011895145867235e-08
+  translation -0.7017145406354547 0.5150220798760797 2.175584362428574
+  rotation -0.0002243163727289525 0.0004318832110686004 0.9999998815795215 0.9709868698278112
+  name "duck2(2)"
+  scale 7
+  bodyColor 0.180392 0.760784 0.494118
+}
+RubberDuck {
+  translation 0.23489405360652132 -0.495800619576439 2.090501818894667
+  rotation 2.7328819611093297e-06 2.358411395120631e-06 -0.9999999999934845 1.425187471568287
+  name "duck2(3)"
+  scale 2
+  bodyColor 0.180392 0.760784 0.494118
+}
+RubberDuck {
+  translation -0.19700289530602857 0.8654365666830314 2.0909916649221985
+  rotation 3.3813939320363584e-06 -2.3473064947226068e-06 0.9999999999915282 1.2132340497993355
+  name "duck2(4)"
+  scale 2
+  bodyColor 0.180392 0.760784 0.494118
+  density 10
+}
+RubberDuck {
+  hidden linearVelocity_0 0.0030725755186607724 -0.002790095491274835 0.0003794489990688948
+  hidden angularVelocity_0 0.019929452023405545 0.021947238213868348 1.0507356722154152e-07
+  translation 0.9965243113245963 -0.5152801502705591 2.1755795273563088
+  rotation -0.00022821825593308885 8.594801490045795e-05 0.9999999702646828 2.4043413645162923
+  name "duck2(1)"
+  scale 7
+  bodyColor 0.180392 0.760784 0.494118
+}
+CircleArena {
+  name "defeat arena"
+  radius 8
+  floorAppearance MattePaint {
+    baseColor 0.300008 0.0119936 0.0119936
+  }
+}
+SolidBox {
+  translation 0 0 2
+  rotation 1 0 0 4.692820414042842e-06
+  name "arena"
+  size 8 8 0.1
+  appearance PBRAppearance {
+    baseColor 0 1 0
+    baseColorMap ImageTexture {
+    }
+    roughness 0.5
+    metalness 0
+  }
+}
+Rosbot {
+  hidden position_0_0 12.449057544293675
+  hidden position_0_1 1910.3344820454772
+  hidden position_0_2 12.461210640896619
+  hidden position_0_3 1910.3351184942164
+  hidden linearVelocity_0 -0.041349248933116714 0.04775129645557327 9.074929675946667e-05
+  hidden angularVelocity_0 8.706717597828156e-05 0.009684437344811104 0.9233533377842249
+  hidden translation_2 0.050260611405266206 0.11040564607897604 0.04301148256484387
+  hidden rotation_2 -9.429639596314065e-06 -0.9999999999545259 -1.424715706427211e-06 0.11731303512371731
+  hidden linearVelocity_2 -0.01281869085386976 0.009125697929700142 0.0004814680949871203
+  hidden angularVelocity_2 8.365380877305389e-05 0.009679254450482472 0.9233536901755481
+  hidden translation_3 0.04986760977068725 -0.1105211117020497 0.04320938525602176
+  hidden rotation_3 -0.000700500943026471 0.9999923498234675 -0.0038483233970782824 4.226652852185825
+  hidden linearVelocity_3 -0.16344349069526393 0.11167997007316245 0.00023583020292556895
+  hidden angularVelocity_3 -2.8300238685534667 -4.112301607539506 0.9465000317281261
+  hidden translation_4 -0.05522984218730365 0.11052437816352029 0.043010646905990865
+  hidden rotation_4 7.022285783251876e-06 -0.9999999999667717 -4.140567109496761e-06 0.10515991154899686
+  hidden linearVelocity_4 0.042045474719497704 0.08982037343291467 -0.00034709691600522477
+  hidden angularVelocity_4 8.749256247882306e-05 0.009685467293509947 0.9233535384012725
+  hidden translation_5 -0.054820841266494134 -0.11039644768748635 0.04324436271630633
+  hidden rotation_5 -0.0007015876179328722 0.999992346295021 -0.0038490422436492336 4.2273022189361305
+  hidden linearVelocity_5 -0.11010889001043611 0.1929486383769511 -0.0004536329989600743
+  hidden angularVelocity_5 -2.8300268551529686 -4.1123050843140865 0.9465028359644894
+  translation 0.16064397351371906 0.25553096081268645 2.0490925366697637
+  rotation 0.0035352410714628436 0.000303221298135915 -0.9999937050438922 -2.5604092306053268
+  controller "my_controller"
+  lidarSlot [
+    BeerBottle {
+      translation -0.0968789 0.261364 0.774511
+      rotation 0.5515546716711843 0.42322274806446075 0.7187975721150275 2.13352
+    }
+    BeerBottle {
+      translation -0.0968789 0.261364 0.774511
+      rotation 0.5515546716711843 0.42322274806446075 0.7187975721150275 2.13352
+    }
+    BeerBottle {
+      translation -0.0529216 -0.259719 0.764993
+      rotation 0.3424571372320199 -0.8267643313072699 0.4463001788447907 -1.496265307179586
+    }
+    Pedestrian {
+    }
+    Sheep {
+    }
+    RpLidarA2 {
+      name "lidar"
+    }
+    SoccerBall {
+      translation 0.06 0 1.71
+      radius 0.15
+    }
+    Helmet {
+      translation 0.48 0 0.54
+    }
+  ]
+}
