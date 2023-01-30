@@ -3,6 +3,7 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot, Motor, DistanceSensor, GPS
+import random
 
 class SmashBotMotor(Motor):
 
@@ -52,6 +53,7 @@ class SmashBot(Robot):
         super().__init__()
         self.__motors = SmashBotMotors()
         self.__sensors = SmashBotSensors()
+        self.gps = SmashBotGPS()
 
     def run(self, dir='forward', speed=10):
         if dir=='forward':
@@ -94,7 +96,38 @@ class SmashBotSensors(SmashBotSensor):
     
 class SmashBotGPS(GPS):
     def __init__(self):
-        super().__init__('GPS')
+        super().__init__('gps')
+
+
+    def getGPS(self):
+        return self.getValues()
+
+    def checkGPS(self):
+        borders={
+            "right":3.5,
+            "left":-3.5,
+            "front":3.5,
+            "back":-3.5
+        }
+
+        limit=0.3
+
+        coord=self.getValues()
+        long=[]
+
+        for key,value in borders.items():
+            long.append(abs(coord[0]-borders[key]))
+            long.append(abs(coord[1]-borders[key]))
+
+        long = min(long)
+
+        if(long<limit):
+            print(True)
+            return True
+        else:
+            print(False)
+            return False
+
 
 # create the Robot instance.
 robot = SmashBot()
@@ -114,12 +147,26 @@ while robot.step(timestep) != -1:
     # Read the sensors:
     # Enter here functions to read sensor data, like:
     #  val = ds.getValue()
-    robot.run('left')
+    gpsVal = robot.gps.getGPS()
+
+
+    robot.run("forwward")
+
+    if(robot.gps.checkGPS()==True):
+        if(turn==1):
+            robot.run("right")
+        else:
+            robot.run("left")
+    else:
+        robot.run("forward")
+        if(random.randint(0,1)==1):
+            turn=1
+        else:
+            turn=0
 
     # Process sensor data here.
 
     # Enter here functions to send actuator commands, like:
     #  motor.setPosition(10.0)
-    pass
 
 # Enter here exit cleanup code.
