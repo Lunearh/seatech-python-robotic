@@ -20,13 +20,13 @@ class SmashBotMotors():
         self.__rear_right_wheel_m = SmashBotMotor("rear right wheel motor")
         self.__rear_left_wheel_m = SmashBotMotor("rear left wheel motor")
     
-    def go_forward(self, speed=5):
+    def go_forward(self, speed=20):
         self.__front_right_wheel_m.setVelocity(speed)
         self.__front_left_wheel_m.setVelocity(speed)
         self.__rear_left_wheel_m.setVelocity(speed)
         self.__rear_right_wheel_m.setVelocity(speed)
 
-    def go_backwards(self, speed=5):
+    def go_backwards(self, speed=20):
 
         self.__front_right_wheel_m.setVelocity(-1*speed)
         self.__front_left_wheel_m.setVelocity(-1*speed)
@@ -34,14 +34,14 @@ class SmashBotMotors():
         self.__rear_right_wheel_m.setVelocity(-1*speed)
         print("Go Back method")
 
-    def go_left(self, speed=5):
+    def go_left(self, speed=20):
         self.__front_right_wheel_m.setVelocity(speed)
         self.__front_left_wheel_m.setVelocity(0)
         self.__rear_left_wheel_m.setVelocity(0)
         self.__rear_right_wheel_m.setVelocity(speed)
         print("Go Left method")
 
-    def go_right(self, speed=5):
+    def go_right(self, speed=20):
             self.__front_right_wheel_m.setVelocity(0)
             self.__front_left_wheel_m.setVelocity(speed)
             self.__rear_left_wheel_m.setVelocity(speed)
@@ -55,7 +55,7 @@ class SmashBot(Robot):
         self.__sensors = SmashBotSensors()
         self.gps = SmashBotGPS()
 
-    def run(self, dir='forward', speed=10):
+    def run(self, dir='forward', speed=20):
         if dir=='forward':
             self.__motors.go_forward()
         elif dir=='backwards':
@@ -104,10 +104,10 @@ class SmashBotGPS(GPS):
 
     def checkGPS(self):
         borders={
-            "right":3.5,
-            "left":-3.5,
-            "front":3.5,
-            "back":-3.5
+            "right":2.5,
+            "left":-2.5,
+            "front":2.5,
+            "back":-2.5
         }
 
         limit=0.3
