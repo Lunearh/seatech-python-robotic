@@ -7,5 +7,5 @@ centralWidgetVisible: 1
 orthographicViewHeight: 1
 textFiles: 0 "controllers/my_controller/my_controller.py"
 consoles: Console:All:All
-renderingDevicePerspectives: Rosbot:camera depth;1;0.390625;0;0
-renderingDevicePerspectives: Rosbot:camera rgb;1;0.395313;0;0
+renderingDevicePerspectives: Rosbot:camera depth;0;0.390625;0;0
+renderingDevicePerspectives: Rosbot:camera rgb;0;0.395313;0;0
