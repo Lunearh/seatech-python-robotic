@@ -14,6 +14,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/drinks/protos/BeerBottle.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/balls/protos/SoccerBall.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/PlasticFruitBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/traffic/protos/TrafficCone.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/forklift/protos/Forklift.proto"
 
 WorldInfo {
   contactProperties [
@@ -22,8 +24,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.12711698578142638 0.08152079330547715 -0.9885320592599364 1.9299666904560393
-  position 2.5415644894146667 5.872194190813895 4.225449103728127
+  orientation 0.37114138070955094 -0.12427585981366925 -0.9202225742680851 3.712311291652456
+  position 7.1948079179290545 -5.60145481304492 13.072049804215176
 }
 TexturedBackground {
   texture "noon_stormy_empty"
@@ -32,62 +34,29 @@ TexturedBackgroundLight {
   luminosity 1.5
 }
 RubberDuck {
-  translation 3.7187522684103405 3.7339458877360157 2.178309272724305
-  rotation 0.02398588462967779 0.006548433972232838 0.9996908498886258 0.7167333797586782
+  translation 3.718707723885096 3.733960773400777 2.17830930645802
+  rotation 0.02398855406378738 0.006548413359325289 0.9996907859715444 0.7166298368176638
   name "duck1"
   scale 7
 }
 RubberDuck {
-  translation -3.737310212618117 -3.694809812229292 2.17827163508514
-  rotation 0.005119709387488225 -0.008326090451773892 0.9999522312558619 -2.216570006627175
+  translation -3.737327915565008 -3.694766522536175 2.1782716685012415
+  rotation 0.005119847065062847 -0.008325917114934956 0.9999522319942217 -2.2164659882685376
   name "duck3"
   scale 7
   bodyColor 0.878431 0.105882 0.141176
 }
 RubberDuck {
-  translation -3.726099742808778 3.7440123997420054 2.180458636098583
-  rotation 0.00650863456331198 -0.001955743696313071 0.9999769061046938 2.402746134857409
+  translation -3.7261047334383712 3.744015808723698 2.1804586703351476
+  rotation 0.006508432330136601 -0.0019557300376173725 0.9999769074476791 2.402746719917061
   name "duck4"
   scale 7
   bodyColor 0.878431 0.105882 0.141176
 }
 RubberDuck {
-  translation 3.730023261210253 -3.6961865380129857 2.1782702939725485
-  rotation 0.020264903274975855 -0.010752329540929747 -0.9997368259220518 0.7832307383649658
+  translation 3.730046699439782 -3.6961300221645654 2.1782703703605706
+  rotation 0.02025967509307992 -0.010750544562536215 -0.999736951080999 0.7833630875144716
   name "duck2"
-  scale 7
-  bodyColor 0.180392 0.760784 0.494118
-}
-RubberDuck {
-  hidden linearVelocity_0 0.0033735478518134156 0.0035416952577027403 -3.4984625835248954e-07
-  hidden angularVelocity_0 -0.025220287171099223 0.024022883238509565 1.1535920640097762e-07
-  translation -0.8941270727102503 0.4753817532014789 2.17561527042213
-  rotation -0.00027865868233509336 0.00066181212639594 0.9999997421769908 0.8097097546157198
-  name "duck2(2)"
-  scale 7
-  bodyColor 0.180392 0.760784 0.494118
-}
-RubberDuck {
-  translation 0.2389158059346114 -0.5131753795360694 2.0905017373221573
-  rotation 2.5568352906181483e-06 2.3586380176113785e-06 -0.9999999999939497 1.4906712128908224
-  name "duck2(3)"
-  scale 2
-  bodyColor 0.180392 0.760784 0.494118
-}
-RubberDuck {
-  translation -0.20113254881038095 0.8723298999441444 2.090991697247712
-  rotation 3.598686705249224e-06 -2.347350501406299e-06 0.9999999999907697 1.15594157400517
-  name "duck2(4)"
-  scale 2
-  bodyColor 0.180392 0.760784 0.494118
-  density 10
-}
-RubberDuck {
-  hidden linearVelocity_0 0.003635506833647219 -0.0032722498274839005 3.549001650328856e-07
-  hidden angularVelocity_0 0.023301494279637344 0.025888263141048588 1.243099739949511e-07
-  translation 0.9963549493190695 -0.45538801732412515 2.1756109145385794
-  rotation 0.0002860569873800128 -0.00011199151724146288 0.9999999528146487 2.4087337599662977
-  name "duck2(1)"
   scale 7
   bodyColor 0.180392 0.760784 0.494118
 }
@@ -112,59 +81,235 @@ SolidBox {
   }
 }
 Rosbot {
-  hidden position_0_0 12.449098327858627
-  hidden position_0_1 1981.199728431881
-  hidden position_0_2 12.46122286592543
-  hidden position_0_3 1981.200395510282
-  hidden linearVelocity_0 -0.08468566864956016 -0.07331421189866405 0.0003460638650683809
-  hidden angularVelocity_0 0.002243879944537368 0.002835717849551264 0.7246836092049188
-  hidden translation_2 0.05029306722178656 0.11056819964292594 0.043019337136271
-  hidden rotation_2 -1.4526054894706834e-05 -0.9999999998867194 -3.943963897593509e-06 0.11727225842766954
-  hidden linearVelocity_2 -0.009784821138405276 -0.0517275444336893 3.349625966944779e-05
-  hidden angularVelocity_2 0.0022454196990943074 0.002833445612647781 0.7246836234573476
-  hidden translation_3 0.05012413046496596 -0.11068876062694255 0.04308240961707494
-  hidden rotation_3 -0.003225321269746232 0.999967525639183 0.00738545663832332 5.849274295150433
-  hidden linearVelocity_3 -0.12189546275878176 -0.14290656889724684 6.929223373333503e-06
-  hidden angularVelocity_3 3.140670287400239 -3.8893205762142156 0.7533562620059835
-  hidden translation_4 -0.055355735222509375 0.11072656899223102 0.0430089071793224
-  hidden rotation_4 1.0841433348427031e-05 -0.9999999999289658 -4.952977496814194e-06 0.10514768074551621
-  hidden linearVelocity_4 -0.05809158827575847 0.007813180592054174 -5.051217026107232e-05
-  hidden angularVelocity_4 0.0022445177037154393 0.0028352558672107594 0.7246835583118111
-  hidden translation_5 -0.05491375094231212 -0.11051871354941739 0.04292290120234241
-  hidden rotation_5 -0.0032379136496501052 0.9999673379414219 0.007405333587577351 5.849954612098356
-  hidden linearVelocity_5 -0.16924454576921028 -0.08318920581549583 1.5558239809649785e-05
-  hidden angularVelocity_5 3.1406677752104017 -3.8893214785468833 0.7533587778733872
-  translation -0.013998030046049392 0.3002163961552772 2.0494133207092893
-  rotation -0.0007474522363797249 -0.00027093378553947516 0.9999996839549692 -2.446576965159842
+  hidden rotation_4 -0.001787486121795416 0.9999979677378176 0.0009324235084920155 6.282573665029577
+  translation -0.0440428 -0.17943 2.13941
+  rotation 0.0003237799560603682 0.00040814594461120214 -0.9999998642917047 1.33776
   controller "my_controller"
   lidarSlot [
+    Forklift {
+      translation 0 0 0.6
+      enablePhysics FALSE
+    }
+    TrafficCone {
+      translation 0.05 0 1.74
+    }
     GPS {
     }
     PlasticFruitBox {
+      translation -0.98 -2.24314e-07 0.67
+      rotation 0 0 1 -1.5707953071795862
       color 0.960784 0.760784 0.0666667
     }
     BeerBottle {
-      translation 0.12 -0.07 0.56
+      translation -0.73 -0.07 0.69
       mass 0
     }
     BeerBottle {
-      translation 0.2 -0.07 0.56
+      translation -0.73 0.01 0.69
       mass 0
     }
     BeerBottle {
-      translation 0.2 0 0.56
+      translation -0.73 0.09 0.69
       mass 0
     }
     BeerBottle {
-      translation 0.12 0 0.56
+      translation -0.73 0.17 0.69
       mass 0
     }
     BeerBottle {
-      translation 0.2 0.08 0.56
+      translation -0.73 0.26 0.69
       mass 0
     }
     BeerBottle {
-      translation 0.11 0.08 0.56
+      translation -0.73 0.33 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.73 0.42 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.73 -0.14 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.73 -0.22 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.73 -0.31 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.73 -0.4 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 -0.4 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 -0.3 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 -0.3 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 -0.22 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 -0.13 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 -0.05 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 0.04 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 0.11 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 0.19 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 0.26 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 0.34 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.83 0.41 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 0.41 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 0.33 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 0.24 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 0.16 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 0.07 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 -0.02 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 -0.12 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 -0.2 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 -0.29 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -0.95 -0.38 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 -0.38 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 -0.3 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 -0.2 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 -0.1 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 -0.01 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 0.07 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 0.16 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 0.25 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 0.34 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.06 0.43 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 0.43 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 0.34 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 0.24 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 0.16 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 0.06 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 -0.02 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 -0.12 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 -0.22 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 -0.3 0.69
+      mass 0
+    }
+    BeerBottle {
+      translation -1.15 -0.39 0.69
       mass 0
     }
     BeerBottle {
@@ -187,6 +332,8 @@ Rosbot {
       pantsColor 1 1 1
     }
     Sheep {
+      translation 1.16 0.389999 0.26
+      rotation -0.5773509358554485 0.5773489358556708 -0.5773509358554485 -2.094395307179586
       color 0.878431 0.105882 0.141176
     }
     RpLidarA2 {
@@ -198,7 +345,8 @@ Rosbot {
       mass 0.1
     }
     Helmet {
-      translation 0.48 0 0.54
+      translation 1.16 -0.13 0.71
+      rotation 0.5773549358440343 -0.5773459358450345 0.5773499358445899 2.0944
     }
   ]
 }
